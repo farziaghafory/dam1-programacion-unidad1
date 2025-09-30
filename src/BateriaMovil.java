@@ -13,16 +13,13 @@ public class BateriaMovil {
         System.out.print("Cargas rápidas realizadas: ");
         int cargas = sc.nextInt();
 
-        // Calculate 
-        bateria = bateria - (videos * 15) + (cargas * 25);
+        // Calculate
+        bateria += cargas * 25 - videos * 15;
 
         // battery stays between 0 and 100
-        if (bateria > 100) {
-            bateria = 100;
-        }
-        if (bateria < 0) {
-            bateria = 0;
-        }
+
+        bateria = Math.min(100, bateria);
+        bateria = Math.max(0, bateria);
 
         // Show result
         System.out.println("Batería final: " + bateria);

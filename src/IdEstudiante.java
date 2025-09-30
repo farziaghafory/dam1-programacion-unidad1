@@ -12,11 +12,11 @@ public class IdEstudiante {
         String ciclo = sc.nextLine();
 
         System.out.print("Introduce el año de matrícula: ");
-        String año = sc.nextLine();
+        String anio = sc.nextLine();
 
         // Generate ID
         String id = nombre.substring(0, Math.min(2, nombre.length())) +
-         ciclo.substring(0, Math.min(3, ciclo.length())) + año;
+                ciclo.substring(0, Math.min(3, ciclo.length())) + anio;
 
         // Display ID
         System.out.println("Tu ID es: " + id);
